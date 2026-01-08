@@ -1,0 +1,91 @@
+/* Custom animation for the glowing dot */
+.glowing-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #22c55e; /* green-500 */
+    border-radius: 9999px;
+    box-shadow: 0 0 10px #22c55e, 0 0 20px #22c55e;
+    animation: glowing 2s infinite;
+}
+
+@keyframes glowing {
+    0%, 100% {
+        box-shadow: 0 0 10px #22c55e, 0 0 20px #22c55e;
+    }
+    50% {
+        box-shadow: 0 0 15px #34d399, 0 0 25px #34d399;
+    }
+}
+
+/* Base state for animated elements */
+.animate-on-load {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* State when element is visible */
+.animate-on-load.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Simple override for code block background color */
+pre {
+    background-color: #1e1e1e !important;
+}
+
+/* Sidebar selected file */
+.sidebar-item.selected {
+    background-color: rgba(90, 93, 94, 0.31); /* Original */
+    background-color: rgba(255, 255, 255, 0.05); /* New, bg-white/5 */
+}
+
+/* Tab styles */
+.tab {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    height: 40px;
+    cursor: pointer;
+    border-right: 1px solid #252526;
+    color: #969696; /* Original */
+    color: #a0aec0; /* New */
+}
+
+.tab.active {
+    background-color: #1e1e1e; /* Original */
+    color: white;
+    border-bottom: 2px solid #007acc;
+    background-color: #121212; /* New */
+}
+
+.tab .close-icon {
+    margin-left: 0.5rem;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.tab .close-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Original */
+    background-color: #4a5568; /* New */
+}
+
+/* Icon colors */
+.icon-python { color: #4B8BBE; }
+.icon-yaml { color: #F0A07C; }
+.icon-json { color: #F0DB4F; }
+.icon-folder { color: #A0A0A0; }
+
+/* New styles for refactoring */
+.chevron {
+    transition: transform 0.2s ease-in-out;
+}
+
+.chevron.rotated {
+    transform: rotate(90deg);
+}
+
+pre[class*="language-"] {
+    background: #121212;
+}

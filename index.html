@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waad Hamoud - Full-Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2UaJCW78SJ_TwoRKTgCkc/CuzYTVMgazzhYRBUjvirMazfYHOxCIA7AkcVMAIeyQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              mono: ["Fira Code", "monospace"],
+            },
+            colors: {
+              slate: {
+                400: "#94a3b8",
+              },
+              purple: { 400: "#c586c0" },
+              yellow: { 300: "#dcdcaa" },
+              green: { 400: "#6a9955" },
+              teal: { 300: "#4ec9b0" },
+              orange: { 400: "#ce9178" },
+              "vscode-blue": "#007acc",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-black text-white font-sans">
+    <div id="app" class="px-6">
+      <!-- Navbar -->
+      <nav
+        class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between max-w-5xl mx-auto py-4 px-6 bg-black/50 backdrop-blur-md border-b border-white/10"
+      >
+        <div class="flex items-center space-x-3">
+          <div class="w-8 h-8 bg-slate-800 rounded-full">
+            <img src="./Resume_profile_picture.jpeg" alt="resume photo" />
+          </div>
+          <span class="text-lg font-medium">Waad Hamoud</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            href="#home"
+            class="text-slate-400 hover:text-white transition-colors"
+            >Home</a
+          >
+          <a
+            href="#experience"
+            class="text-slate-400 hover:text-white transition-colors"
+            >Experience</a
+          >
+          <a
+            href="#skills"
+            class="text-slate-400 hover:text-white transition-colors"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="text-slate-400 hover:text-white transition-colors"
+            >Projects</a
+          >
+          <a
+            href="https://github.com"
+            target="_blank"
+            class="text-slate-400 hover:text-white transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+              ></path>
+            </svg>
+          </a>
+        </div>
+        <button id="mobile-menu-button" class="md:hidden text-white">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </nav>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden fixed top-16 left-0 right-0 bg-black/80 backdrop-blur-md z-40"
+      >
+        <div class="flex flex-col items-center space-y-4 py-4">
+          <a
+            href="#home"
+            class="text-slate-400 hover:text-white transition-colors"
+            >Home</a
+          >
+          <a
+            href="#experience"
+            class="text-slate-400 hover:text-white transition-colors"
+            >Experience</a
+          >
+          <a
+            href="#skills"
+            class="text-slate-400 hover:text-white transition-colors"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="text-slate-400 hover:text-white transition-colors"
+            >Projects</a
+          >
+          <a
+            href="https://github.com"
+            target="_blank"
+            class="text-slate-400 hover:text-white transition-colors"
+            >GitHub</a
+          >
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <main
+        id="home"
+        class="max-w-3xl mx-auto text-center pt-32 pb-24 flex flex-col items-center space-y-8 animate-on-load"
+      >
+        <div
+          class="flex items-center space-x-2 bg-white/10 rounded-full px-4 py-1 text-sm"
+        >
+          <div class="glowing-dot"></div>
+          <span class="text-slate-400"
+            >Open to Work - Junior Fullstack Developer</span
+          >
+        </div>
+
+        <h1 class="text-5xl md:text-6xl font-bold tracking-tight">
+          Building Scalable & User-Focused Full-Stack Applications
+        </h1>
+
+        <p class="text-slate-400 max-w-xl">
+          Computer Science graduate specializing in Python, JavaScript, and
+          cloud technologies. Passionate about building innovative web solutions
+          from Münster, Germany.
+        </p>
+
+        <div class="flex items-center justify-center space-x-4">
+          <a
+            href="#experience"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition-colors"
+          >
+            View Experience
+          </a>
+          <a
+            href="Waad_Hamoud_Resume.pdf"
+            download
+            class="bg-white/10 hover:bg-white/20 text-white font-medium py-2 px-4 rounded-md transition-colors flex items-center space-x-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <span>Download CV</span>
+          </a>
+        </div>
+
+        <div
+          class="flex items-center justify-center flex-wrap gap-x-8 gap-y-4 pt-8 text-slate-400"
+        >
+          <div class="flex items-center space-x-2">
+            <svg
+              height="24px"
+              width="24px"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12.83,11.43L15.3,9.81L14.41,8.04L11.94,9.66L12.83,11.43M12.83,12.57L11.94,14.34L14.41,15.96L15.3,14.19L12.83,12.57M9.62,9.66L7.15,8.04L6.26,9.81L8.73,11.43L9.62,9.66M9.62,14.34L8.73,12.57L6.26,14.19L7.15,15.96L9.62,14.34M17.85,6.59C17.38,6.24 16.21,6.5 16.21,6.5L15.6,5.54L14.65,6.03L15.25,7C14.81,7.2 14.45,7.5 14.17,7.88L13.1,6.06L11.23,7.09L12.3,8.91C12.1,9.17 11.96,9.49 11.96,9.81C11.96,9.81 11.95,9.82 11.95,9.83C11.95,9.83 11.96,9.83 11.96,9.84C11.83,10.29 11.83,10.79 11.96,11.24C11.96,11.24 11.95,11.25 11.95,11.25C11.95,11.25 11.96,11.25 11.96,11.26C11.96,11.58 12.1,11.9 12.3,12.16L11.23,13.91L13.1,14.94L14.17,13.12C14.45,13.5 14.81,13.8 15.25,14L14.65,14.97L15.6,15.46L16.21,14.5C16.21,14.5 17.38,14.76 17.85,14.41C18.32,14.06 18.13,13.12 18.13,13.12L19.22,12.61L18.73,11.7L17.65,12.17C17.75,11.79 17.75,11.21 17.65,10.83L18.73,10.3L19.22,9.39L18.13,8.88C18.13,8.88 18.32,7.94 17.85,6.59M4.15,6.59C4.62,6.24 5.79,6.5 5.79,6.5L6.4,5.54L7.35,6.03L6.75,7C7.19,7.2 7.55,7.5 7.83,7.88L8.9,6.06L10.77,7.09L9.7,8.91C9.9,9.17 10.04,9.49 10.04,9.81C10.04,9.81 10.05,9.82 10.05,9.83C10.05,9.83 10.04,9.83 10.04,9.84C10.17,10.29 10.17,10.79 10.04,11.24C10.04,11.24 10.05,11.25 10.05,11.25C10.05,11.25 10.04,11.25 10.04,11.26C10.04,11.58 9.9,11.9 9.7,12.16L10.77,13.91L8.9,14.94L7.83,13.12C7.55,13.5 7.19,13.8 6.75,14L7.35,14.97L6.4,15.46L5.79,14.5C5.79,14.5 4.62,14.76 4.15,14.41C3.68,14.06 3.87,13.12 3.87,13.12L2.78,12.61L3.27,11.7L4.35,12.17C4.25,11.79 4.25,11.21 4.35,10.83L3.27,10.3L2.78,9.39L3.87,8.88C3.87,8.88 3.68,7.94 4.15,6.59Z"
+              /></svg
+            ><span>Python</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <svg
+              height="24px"
+              width="24px"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12,2.5L8.38,4.75L12,7L15.63,4.75L12,2.5M17.63,6L12,9.5L6.38,6L2.38,8.25L12,13.5L21.63,8.25L17.63,6M17.63,11L12,14.5L6.38,11L2.38,13.25L12,18.5L21.63,13.25L17.63,11Z"
+              /></svg
+            ><span>Flask</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <svg
+              height="24px"
+              width="24px"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.68 14.47c-.24 0-.46-.03-.67-.08-.85-.2-1.57-.64-2.14-1.33l-.01-.01c-.24-.29-.4-.4-.59-.4s-.35.11-.59.4l-.01.01c-.57.69-1.29 1.13-2.14 1.33-.21.05-.43.08-.67.08-.95 0-1.77-.35-2.39-1.03-.6-.67-.91-1.55-.91-2.62 0-1.17.43-2.18 1.29-3.03.69-.69 1.55-1.12 2.51-1.3l.11-.02c.47-.08.88-.08 1.25 0 .04.01.08.01.11.02.96.18 1.82.61 2.51 1.3.86.85 1.29 1.86 1.29 3.03 0 1.07-.31 1.95-.91 2.62-.62.68-1.44 1.03-2.39 1.03z"
+              /></svg
+            ><span>FastAPI</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <svg
+              height="24px"
+              width="24px"
+              viewBox="0 0 32 32"
+              fill="currentColor"
+            >
+              <path
+                d="M30,16A14,14,0,1,0,16,30,14,14,0,0,0,30,16ZM2,16A14,14,0,1,1,16,30,14,14,0,0,1,2,16Z"
+              />
+              <path
+                d="M22.56,12.5a.69.69,0,0,0,.17-.47.63.63,0,0,0-.63-.63H19.25V9.32a.63.63,0,0,0-.63-.63H16.54a.63.63,0,0,0-.63.63v2.08H13.83a.63.63,0,0,0-.63.63v2.08H11.12a.63.63,0,0,0-.63.63v2.08h2.08v2.08a.63.63,0,0,0,.63.63h2.08a.63.63,0,0,0,.63-.63V17.29h2.08a.63.63,0,0,0,.63-.63V14.58h2.08a.63.63,0,0,0,.63-.63Z"
+              />
+              <path
+                d="M11.75,15.21.93,24.09,9.81,25,11.75,15.21Z"
+                transform="translate(-1.08 1.01) rotate(-8.1 10.84 20.1) scale(.8)"
+              />
+              <path
+                d="M25,9.81l-9.82-1-1.94,9.8,9.81,1.94,1.94-9.81Z"
+                transform="translate(1.08 -1.01) rotate(8.1 19.16 13.7) scale(.8)"
+              />
+              <path
+                d="M20.1,25l-1.94-9.81-9.81-1.94,1.94,9.81,9.82,1.94Z"
+                transform="translate(-0.01 1.07) rotate(-8.1 14.24 20.14) scale(.8)"
+              />
+              <path
+                d="M13.7,2.92l1.94,9.81,9.81,1.94-1.94-9.82L13.7,2.92Z"
+                transform="translate(1.01 0.01) rotate(8.1 19.57 7.77) scale(.8)"
+              />
+              <path
+                d="M2.92,13.7,12.74,11.75l1-9.82L3.92,3.87,2.92,13.7Z"
+                transform="translate(-0.99 -0.01) rotate(-8.1 7.82 8.71) scale(.8)"
+              /></svg
+            ><span>React</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <svg
+              height="24px"
+              width="24px"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 2L2 12l10 10 10-10L12 2zm0 17.17L4.83 12 12 4.83 19.17 12 12 19.17zM12 7l-5 5h3v5h4v-5h3l-5-5z"
+              /></svg
+            ><span>Next.js</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <svg
+              height="24px"
+              width="24px"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+            >
+              <path
+                d="M8.01 12.59a4.24 4.24 0 0 1-2.95-1.22 4.24 4.24 0 0 1-1.22-2.95 4.24 4.24 0 0 1 1.22-2.95 4.24 4.24 0 0 1 2.95-1.22V0A8 8 0 0 0 0 8a8 8 0 0 0 8.01 8V12.59zM8.01 0v4.22A3.78 3.78 0 0 1 11.8 8a3.78 3.78 0 0 1-3.79 3.78v4.21A8 8 0 0 0 16 8 8 8 0 0 0 8.01 0z"
+              /></svg
+            ><span>PostgreSQL</span>
+          </div>
+        </div>
+      </main>
+
+      <!-- Mock IDE -->
+      <section
+        id="skills"
+        class="max-w-5xl mx-auto pb-24 animate-on-load font-mono"
+      >
+        <div
+          class="bg-[#1e1e1e] rounded-lg shadow-2xl overflow-hidden min-h-[500px] flex flex-col"
+        >
+          <!-- Editor Header -->
+          <div class="flex items-center justify-between h-10 bg-[#252526] px-4">
+            <div class="flex items-center space-x-2">
+              <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+              <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+              <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+            </div>
+            <div class="text-sm text-slate-400 editor-header-filename"></div>
+            <div class="w-12"></div>
+          </div>
+
+          <!-- Editor Body -->
+          <div class="flex text-sm flex-1">
+            <!-- Sidebar -->
+            <div
+              class="w-64 bg-[#1e1e1e] p-2 text-slate-300 border-r border-white/10"
+            >
+              <p class="text-xs text-slate-400 mb-2 px-2">EXPLORER</p>
+              <div class="space-y-1">
+                <div
+                  class="flex items-center space-x-1 cursor-pointer"
+                  data-toggle="collapse"
+                  data-target="#folder-waad-portfolio"
+                >
+                  <i
+                    class="fas fa-chevron-down text-xs w-4 text-center chevron"
+                  ></i>
+                  <i class="fas fa-folder icon-folder mr-1"></i>
+                  <span>waad-portfolio</span>
+                </div>
+                <div id="folder-waad-portfolio" class="pl-5 space-y-1">
+                  <div
+                    class="sidebar-item flex items-center space-x-2 px-2 py-1 cursor-pointer"
+                    data-filename="profile.py"
+                  >
+                    <i class="fab fa-python icon-python"></i>
+                    <span>profile.py</span>
+                  </div>
+                  <div
+                    class="sidebar-item flex items-center space-x-2 px-2 py-1 cursor-pointer"
+                    data-filename="skills.yaml"
+                  >
+                    <i class="fas fa-file-alt icon-yaml"></i>
+                    <span>skills.yaml</span>
+                  </div>
+                  <div
+                    class="flex items-center space-x-1 cursor-pointer"
+                    data-toggle="collapse"
+                    data-target="#folder-projects"
+                  >
+                    <i
+                      class="fas fa-chevron-right text-xs w-4 text-center chevron"
+                    ></i>
+                    <i class="fas fa-folder icon-folder mr-1"></i>
+                    <span>projects</span>
+                  </div>
+                  <div id="folder-projects" class="pl-5 hidden">
+                    <div
+                      class="sidebar-item flex items-center space-x-2 px-2 py-1 cursor-pointer"
+                      data-filename="experience.json"
+                    >
+                      <i class="fas fa-code icon-json"></i>
+                      <span>experience.json</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="flex-1 flex flex-col">
+              <!-- Tabs -->
+              <div id="tab-container" class="flex bg-[#1e1e1e]">
+                <!-- Tabs will be dynamically inserted here -->
+              </div>
+
+              <!-- Code Area -->
+              <div class="flex flex-1 overflow-auto">
+                <div
+                  id="line-numbers"
+                  class="text-right text-slate-500 pt-4 pr-2 text-sm select-none bg-[#121212]"
+                >
+                  <!-- Line numbers will be dynamically inserted here -->
+                </div>
+                <pre
+                  class="text-slate-300 p-4 w-full overflow-x-auto overflow-y-auto"
+                ><code id="code-area" class="text-sm leading-relaxed"></code></pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div
+            class="bg-vscode-blue h-6 flex items-center justify-between px-4 text-xs"
+          >
+            <div class="flex items-center space-x-2">
+              <svg class="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M11.75 2.5a.75.75 0 10-1.5 0v10.334l-3.359-2.239a.75.75 0 00-.882 0l-3.359 2.239V2.5a.75.75 0 00-1.5 0v11.532a.75.75 0 001.209.58l4.009-2.673a.75.75 0 01.882 0l4.009 2.673a.75.75 0 001.209-.58V2.5z"
+                ></path>
+              </svg>
+              <span>main*</span>
+            </div>
+            <span class="text-slate-400">0 errors</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
+      integrity="sha512-7Z9acbOQW0JcqzzdFAzCRjVqt2J0/2cc4TenQY3Xo2c2hUGI/RTqbrXo5eyZe59Ipy3JwyMGFWvRGGINS9KA1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"
+      integrity="sha512-S_2_iQ3GXLN4j6Bw4f/I1D9fK/HjBFC3OsCgrxO2tU2TfV4GweG5urjM1rCs3SVOVfL6x+jSxgC/w6n2O/UvXw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

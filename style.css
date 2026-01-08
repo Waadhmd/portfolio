@@ -89,3 +89,21 @@ pre {
 pre[class*="language-"] {
     background: #121212;
 }
+
+/* Custom Fade In Up Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.2s; /* Optional: delay to make it more noticeable */
+    opacity: 0; /* Start with opacity 0 so it fades in */
+}

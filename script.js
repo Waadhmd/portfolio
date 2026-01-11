@@ -40,20 +40,23 @@ document.addEventListener("DOMContentLoaded", () => {
       content: `class WaadHamoud:
     def __init__(self):
         self.name = "Waad Hamoud"
-        self.title = "Backend Engineer"
+        self.title = "Software Developer"
+        self.education = "B.Eng. in Computer Science"
         self.location = "Germany"
-        self.email = "waad.hmd@example.com"
-        self.linkedin = "linkedin.com/in/waad-hmd"
-        self.github = "github.com/waad-hmd"
+        self.email = "waad.hamoud94@gmail.com"
+        self.linkedin = "www.linkedin.com/in/waad-hamoud"
+        self.github = "https://github.com/Waadhmd"
+        self.status = "Open to Work"
 
     def summary(self):
-        return (
-            "Backend Engineer with a passion for building scalable and efficient web applications. "
-            "Experienced in Python, Flask, FastAPI, and various database technologies. "
-            "A quick learner and a team player, always eager to take on new challenges."
-        )
+    return {
+            "focus": "Backend Engineering & Full-stack development",
+            "strengths": ["Analytical thinking", "Problem-solving", "Code quality"],
+            "commitment": "Building reliable, high-quality products in fast-paced teams"
+        }
 
 me = WaadHamoud()
+print(me.get_summary()),
 `,
     },
     "skills.yaml": {
@@ -71,18 +74,27 @@ languages: [Arabic: Native, English: Professional, German: B2]
       content: `[
   {
     "company": "Masterschool", 
-    "role": "Backend Engineering", 
-    "period": "2025-Present" 
+    "role": "Software Engineering Training", 
+    "period": "may 2025 - jan 2026" ,
+    "highlights": "Advanced Python, OOP, and RESTful API design"
   },
   {
-    "company": "Tamakan IT", 
+    "company": "Tamakan Information Technology", 
     "role": "Junior Frontend Developer", 
-    "period": "2023" 
+    "period": "Jan 2023 - May 2023",
+    "tech": "React, Nest.js, JWT, CRUD" 
   },
   {
     "company": "Contentpepper", 
-    "role": "Frontend Intern", 
-    "period": "2022" 
+    "role": "Frontend Developer Intern", 
+    "period": "Jul 2022 - Sep 2022" ,
+    "tech": "Next.js, API routes"
+  },
+  {
+    "company": "MABCO",
+    "role": "Application Support Specialist",
+    "period": "2019 - 2021",
+    "focus": "Data flow & performance optimization"
   }
 ]`,
     },

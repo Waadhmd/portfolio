@@ -47,11 +47,7 @@
             class="text-slate-400 hover:text-white transition-colors"
             >Home</a
           >
-          <a
-            href="#experience"
-            class="text-slate-400 hover:text-white transition-colors"
-            >Experience</a
-          >
+
           <a
             href="#skills"
             class="text-slate-400 hover:text-white transition-colors"
@@ -61,6 +57,11 @@
             href="#projects"
             class="text-slate-400 hover:text-white transition-colors"
             >Projects</a
+          >
+          <a
+            href="#connect"
+            class="text-slate-400 hover:text-white transition-colors"
+            >Connect</a
           >
           <a
             href="https://github.com"
@@ -111,11 +112,7 @@
             class="text-slate-400 hover:text-white transition-colors"
             >Home</a
           >
-          <a
-            href="#experience"
-            class="text-slate-400 hover:text-white transition-colors"
-            >Experience</a
-          >
+
           <a
             href="#skills"
             class="text-slate-400 hover:text-white transition-colors"
@@ -125,6 +122,11 @@
             href="#projects"
             class="text-slate-400 hover:text-white transition-colors"
             >Projects</a
+          >
+          <a
+            href="#connect"
+            class="text-slate-400 hover:text-white transition-colors"
+            >Connect</a
           >
           <a
             href="https://github.com"
@@ -161,10 +163,10 @@
 
         <div class="flex items-center justify-center space-x-4">
           <a
-            href="#experience"
+            href="#connect"
             class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md transition-colors"
           >
-            View Experience
+            Let's Connect
           </a>
           <a
             href="Waad_Hamoud_Resume.pdf"
@@ -433,7 +435,7 @@
             <ul class="space-y-2 text-slate-300">
               <li>Adaptability</li>
               <li>Problem Solving</li>
-              <li>Technical Writing</li>
+              <li>Attention to detail</li>
             </ul>
           </div>
 
@@ -443,8 +445,11 @@
           >
             <h3 class="text-xl font-bold mb-4">Current Learning</h3>
             <ul class="space-y-2 text-slate-300">
-              <li>Go</li>
               <li>Advanced CI/CD</li>
+              <li>LLM Application Development</li>
+              <li>Prompt Engineering</li>
+              <li>AI-Powered Python Workflows</li>
+              <li>LLM Applications with LangChain</li>
             </ul>
           </div>
 
@@ -686,6 +691,87 @@
             <span
               class="absolute inset-0 border-2 border-transparent group-hover:border-blue-500 rounded-lg transition-all duration-300 pointer-events-none"
             ></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Connect Section -->
+      <section id="connect" class="max-w-4xl mx-auto pb-24 font-mono">
+        <div
+          class="bg-[#0d1117]/80 backdrop-blur-md border border-white/10 rounded-lg shadow-2xl overflow-hidden"
+        >
+          <!-- SQL Header -->
+          <div class="flex items-center justify-between h-10 bg-[#161b22] px-4">
+            <div class="flex items-center space-x-2">
+              <i class="fas fa-database text-blue-400"></i>
+              <span class="font-mono text-sm">query_contacts.sql</span>
+            </div>
+            <div class="text-xs font-mono text-green-400">EXECUTE SUCCESS</div>
+          </div>
+
+          <!-- Query Editor Area -->
+          <div class="p-4 text-sm text-slate-300">
+            <p>
+              <span class="text-purple-400">SELECT</span> *
+              <span class="text-purple-400">FROM</span> waad_contacts
+              <span class="text-purple-400">WHERE</span> status =
+              <span class="text-green-400">'OPEN_TO_WORK'</span>;
+            </p>
+          </div>
+
+          <!-- Results Table -->
+          <div class="px-4 pb-4">
+            <table class="w-full text-sm text-left">
+              <thead>
+                <tr class="bg-white/5 text-slate-400">
+                  <th class="p-2">id</th>
+                  <th class="p-2">platform</th>
+                  <th class="p-2">connection_string</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="hover:bg-blue-500/10">
+                  <td class="p-2">1</td>
+                  <td class="p-2">Email</td>
+                  <td class="p-2">
+                    <a
+                      href="mailto:waad.hamoud94@gmail.com"
+                      class="text-blue-400 hover:underline"
+                      >waad.hamoud94@gmail.com</a
+                    >
+                  </td>
+                </tr>
+                <tr class="hover:bg-blue-500/10">
+                  <td class="p-2">2</td>
+                  <td class="p-2">LinkedIn</td>
+                  <td class="p-2">
+                    <a
+                      href="https://www.linkedin.com/in/waad-hamoud/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline"
+                      >linkedin.com/in/waadhmd</a
+                    >
+                  </td>
+                </tr>
+                <tr class="hover:bg-blue-500/10">
+                  <td class="p-2">3</td>
+                  <td class="p-2">GitHub</td>
+                  <td class="p-2">
+                    <a
+                      href="https://github.com/Waadhmd"
+                      target="_blank"
+                      class="text-blue-400 hover:underline"
+                      >github.com/Waadhmd</a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Footer Detail -->
+          <div class="px-4 pb-2 text-xs text-slate-500">
+            3 rows affected (0.001s)
           </div>
         </div>
       </section>
